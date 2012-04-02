@@ -18,7 +18,7 @@
 <span style='font-size:85px;line-heivertical-align:top;'>Dave Cole &amp; Tom MacWright</span>
 </div>
     <div>What kind of web maps can you make?</div>
-    <div><h3>A base map</h3>
+    <div><h3>A base map:</h3>
         <img src="img/base-map-features.png">
     </div>
     <div><h3>Or tiled overlays</h3>
@@ -28,12 +28,12 @@
         <img src="img/tile-overlay-grid.png">
     </div>
 
-    <div><h3>With client features</h3>
+    <div><h3>With dynamic features</h3>
         <img src="img/base-map.png">
     </div>
     
 <!-- What are the steps -->
-<div>Process:</div>
+<div><h3>Process:</h3></div>
 <div><h3><strong>1.</strong> Sourcing data</h3> Where do you find reliable open data?</div>
 <div><h3><strong>2.</strong> Processing data</h3> Adding geographic information, projections, summarization</h3></div>
 <div><img src='design_bg.png' /><h3><strong>3.</strong> Design</h3> visualizing the data; telling a story</div>
@@ -43,28 +43,18 @@
 <div><h3>Where to find open data:</h3></div>
     <div><h3>OpenStreetMap</h3>openstreetmap.org</div>
     <div><h3>US Census</h3>census.gov/<br>geo/www/tiger</div>
-    <div><h3>Local government open data</h3><img src='img/dc-geodata.png' style='width: 100%;'></div>
+    <div><h3>Local government open data</h3></div>
     <div><h3>Natural Earth</h3>naturalearthdata.com</div>
     <div><h3>Data you create</h3>Like a <strong>spreadsheet</strong> or <strong>list</strong> of addresses</div>
 <div><h3>Processing data:</h3></div>
     <div><h3>Tools</h3>QGIS, ORG / GDAL, PostGIS, scripting</div>
     <div><h3>Formats</h3> shp, geojson, kml, geotiff, csv</div>
-    <div>Adding geographic data</div>
     <div><h3>Geocoding</h3> <strong>55 4th Street, San Francisco, CA 94103</strong> -> <pre class='prettyprint'>
     {
         lng: -122.404883,
         lat: 37.785034
     }
     </pre></div>
-    <div><h3>Geocoding</h3>
-        nominatim.<br>&nbsp;&nbsp;openstreetmap.org
-            geocoder.us
-        geonames.org
-    </div>
-    <div><h3>Joining geographic data</h3>
-    <img src='img/join.png' style='margin-left:  -385px; padding-left: 50%;'>
-    
-    </div>
     <div><h3>Projections</h3>Converting a 3d globe to a flat map</div>
         <div><h3>Spherical <strong>mercator</strong></h3> 
             <img src='img/mercator.png'></div>
@@ -76,10 +66,16 @@
         <div><h3>Pivot tables</h3><img src='img/summed.png' style='width:100%;'></div>
         <div><h3>Points in areas</h3><img src='img/points-in-poly.png'></div>
         <div><h3>Nearest neighbors</h3><img src='img/nearest.png'></div>
+<<<<<<< HEAD
         <div><h3>Gridding</h3><img src='img/gridded.png'></div>
+<div><h3>Designing the map</h3></div>
+    <div><h3>Basic styling with QGIS</h3></div>
+=======
+        <div><h3>Gridding</h3><img src='img/gridding.jpg'></div>
 <div>Designing the map</div>
-    <div><h3>TileMill + Carto</h3><img src="img/carto.png"></div>
-    <div><h3>Zoom-based design</h3><img src="img/zoom.png"></div>
+    <div>Applying styles to data: TileMill and Carto</div>
+>>>>>>> 944c495848f20cfe8b9bd4472253df67a937bb3a
+    <div>Zoom-dependent design: What to show and when</div>
     <div>Interactive features: overlays add context</div>
 
 
@@ -161,8 +157,8 @@ map.addLayer(new L.Marker(new L.LatLng(-34.397, 150.644)));
 <div><h3>Thanks!</h3>
   <a href='http://mapbox.com/'>MapBox</a>
   <a href='http://twitter.com/mapbox/'>@mapbox</a>
-  <a href='http://twitter.com/dhcole/'>@dhcole</a>
-  <a href='http://twitter.com/tmcw/'>@tmcw</a></div>
+  <a href='http://twitter.com/mapbox/'>@dhcole</a>
+  <a href='http://twitter.com/mapbox/'>@tmcw</a></div>
 
 </body>
 </html>
