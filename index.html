@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html><head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link href='medium.css' rel='stylesheet' type='text/css' />
+    <link href='prettyprint.css' rel='stylesheet' type='text/css' />
+    <meta charset='utf8' />
+    <script src='medium.js'></script>
+    <script src='prettify.js'></script>
+    <script type='text/javascript'>window.addEventListener('load', prettyPrint);</script>
+  </head>
+<body>
+
+<!-- Intro to web mapping: what can you make? -->
+<div>An Open Web Mapping Toolbox</div>
+    <div>What kind of web maps can you make?</div>
+    <div>A base map:
+        <img src="img/base-map.png">
+    </div>
+    <div>With features:
+        <img src="img/base-map-features.png">
+    </div>
+    <div>Or tile-based overlays:
+        <img src="img/tile-overlay.png">
+    </div>
+    
+<!-- What are the steps -->
+<div>1. Sourcing data: where do you find reliable open data</div>
+<div>2. Processing data: adding geographic information, projections, summarization</div>
+<div>3. Designing the map: visualizing the data; telling a story</div>
+<div>4. Map distribution: rendering / serving the map on the web / mobile</div>
+
+<!-- Making a base layer: tiled -->
+
+    <div>OpenStreetMap<br><small><a href='http://openstreetmap.org/'>openstreetmap.org</a></small></div>
+    <div>US Census<br><small><a href='http://census.gov/geo/www/tiger'>census.gov/geo/www/tiger</a></small></div>
+    <div>Local government open data</div>
+    <div>Natural Earth<br><small><a href='http://naturalearthdata.com/'>naturalearthdata.com</a></small></div>
+    <div>Data you create, like a <strong>spreadsheet</strong></div>
+    
+    
+<!-- Adding client-side features -->
+
+<div><h3>The Client Side</h3> putting web maps on web pages</div>
+<div>generally <strong>Javascript</strong> libraries that deal in <strong>images</strong></div>
+<div>lots of options:</div>
+<div><h3>OpenLayers</h3>established, monolithic, 'hefty'</div>
+<div><h3>Leaflet</h3> OpenLayers post-web renassiance &amp; workout time</div>
+<div><h3>Modest Maps</h3> nothing but tiles: wafer thin &amp; light</div>
+<div><h3>'Theme'</h3> open source libraries &gt; their &copy; equivalents</div>
+<div><pre class='prettyprint'>
+// The world-famous
+// Google Maps API
+new google.maps.Map($('map')[0], {
+  zoom: 8,
+  center: new google.maps.LatLng(
+    -34.397, 150.644),
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+});</pre></div>
+<div><img src='http://dl.dropbox.com/u/68059/Screenshots/206ud2hv028g.png' /></div>
+
+
+<div><pre class='prettyprint'>
+// Leaflet with MapBox Streets
+var mylayer = 'http://a.tiles.mapbox.com/v3/tmcw.map-rnesfyru';
+var map = new L.Map('map', {
+    center: new L.LatLng(-34.397, 150.644),
+    zoom: 8,
+    layers: [new L.TileLayer(mylayer + '/{z}/{x}/{y}.png')]
+});</pre></div>
+
+<div><img src='http://dl.dropbox.com/u/68059/Screenshots/lxjw2xadyiyi.png' /></div>
+<div>'red dot fever'</div>
+<div><pre class='prettyprint'>
+// Making a marker in Google Maps
+var marker = new google.maps.Marker({
+  position: new google.maps.LatLng(-34.397, 150.644),
+  map: map
+});</pre></div>
+<div><img src='http://dl.dropbox.com/u/68059/Screenshots/d_xmeo961uu9.png'></div>
+
+<div><pre class='prettyprint'>
+// Making a marker in Leaflet
+map.addLayer(new L.Marker(new L.LatLng(-34.397, 150.644)));
+</pre></div>
+<div><img src='http://dl.dropbox.com/u/68059/Screenshots/93kn1tys~k8b.png' /></div>
+
+<div>What about...</div>
+<div><h3>Performance</h3> </div>
+</body>
+</html>

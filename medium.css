@@ -1,0 +1,36 @@
+body {
+  background:url(grid.png) #333333;
+  color:#FFF;
+  font-family:'Droid Sans';
+  font-weight:normal;
+  font-size:120px;
+  margin:0;
+  padding:0;
+  line-height:140px;
+}
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+em {
+  color:#ade;
+}
+pre {
+  font-size:50px;
+  line-height:55px;
+}
+h3 {
+  margin:0;
+  padding:5px;
+  color:#ade;
+  font-weight:normal;
+  background:url(grid.png) #222;
+}
+strong {
+  color:#ade;
+}
+a {
+  color:#ade;
+  border-bottom:4px solid #ade;
+  text-decoration:none;
+}
