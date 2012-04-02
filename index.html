@@ -21,14 +21,15 @@
     <div><h3>A base map:</h3>
         <img src="img/base-map-features.png">
     </div>
-    <div><h3>With features</h3>
-        <img src="img/base-map.png">
-    </div>
     <div><h3>Or tiled overlays</h3>
         <img src="img/tile-overlay.png">
     </div>
     <div><h3>Or tiled overlays</h3>
         <img src="img/tile-overlay-grid.png">
+    </div>
+
+    <div><h3>With dynamic features</h3>
+        <img src="img/base-map.png">
     </div>
     
 <!-- What are the steps -->
@@ -61,6 +62,8 @@
             <img src='img/albers.png'></div>
     <div><h3>Summarization</h3>Viewing data in aggregate</div>
         <div><h3>Pivot tables</h3>Aggregate records of data on an attribute</div>
+        <div><h3>Pivot tables</h3><img src='img/unsummed.png'></div>
+        <div><h3>Pivot tables</h3><img src='img/summed.png'></div>
         <div><h3>Points in areas</h3><img src='img/points-in-poly.png'></div>
         <div><h3>Nearest neighbors</h3><img src='img/nearest.png'></div>
         <div><h3>Gridding</h3><img src='img/gridding.jpg'></div>
@@ -68,7 +71,19 @@
     <div>Applying styles to data: TileMill and Carto</div>
     <div>Zoom-dependent design: What to show and when</div>
     <div>Interactive features: overlays add context</div>
-    
+
+
+<!-- Tile-based overlays -->
+<div>Tiled overlays: when design and scale matter</div>
+    <div>Chrolopleths across thousands of features</div>
+        <div>Load data, classify on a certain field</div>
+        <div>Use color or patterns to quantify values</div>
+    <div>Show millions of points precisely without sacrificing speed</div>
+    <div>Other possibilities: dot densities; custom shapes</div>
+    <div>Serving tiles == serving images</div>
+        <div>(and maybe interactivity)</div>
+        <div>Mapnik -> cached images</div>
+
     
 <!-- Adding client-side features -->
 
@@ -126,17 +141,6 @@ map.addLayer(new L.Marker(new L.LatLng(-34.397, 150.644)));
 <div><h3>Server-side</h3> Cache, optimize, distribute</div>
 <div><h3>Server-side</h3> TileMill renders maps - then 'just' distribute tiles</div>
 <div><h3>Server-side</h3> Never <strong>WMS</strong> again; tiles are cacheable and distributable</div>
-
-<!-- Tile-based overlays -->
-<div>Tiled overlays: when design and scale matter</div>
-    <div>Chrolopleths across thousands of features</div>
-        <div>Load data, classify on a certain field</div>
-        <div>Use color or patterns to quantify values</div>
-    <div>Show millions of points precisely without sacrificing speed</div>
-    <div>Other possibilities: dot densities; custom shapes</div>
-    <div>Serving tiles == serving images</div>
-        <div>(and maybe interactivity)</div>
-        <div>Mapnik -> cached images</div>
 
 </body>
 </html>
