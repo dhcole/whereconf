@@ -61,8 +61,8 @@
             geocoder.us
         geonames.org
     </div>
-    <div><h3>Joining geographic data</h3>
-    <img src='img/join.png' style='margin-left:  -385px; padding-left: 50%;'>
+    <div><h3>Joining geo data</h3>
+    <center><img src='img/join.png' style='padding-top: 40px;'></center>
     
     </div>
     <div><h3>Projections</h3>Converting a 3d globe to a flat map</div>
@@ -79,22 +79,53 @@
         <div><h3>Gridding</h3><img src='img/gridded.png'></div>
 <div>Designing the map</div>
     <div><h3>TileMill + Carto</h3><img src="img/carto.png"></div>
-    <div><h3>Zoom-based design</h3><img src="img/zoom.png"></div>
-    <div>Interactive features: overlays add context</div>
+    <div><h3>Color variables</h3>
+    <pre class="prettyprint">
+/* ---- PALETTE ---- */
 
+@motorway: #90BFE0; /* #90BFE0 */
+@trunk: #FFFABB;
+@primary: @trunk;
+@secondary: @trunk;
+@road: #bbb;
+@track: @road;
+
+
+    </pre></div>
+    <div><h3>Conditionals, attachments, functions, zoom levels</h3></div>
+    <div>
+    <pre class="prettyprint">
+/* ---- ROAD COLORS ---- */
+
+.highway[TYPE='motorway'] {
+  .line[zoom>=0]  { 
+    line-color:
+        spin(darken(@motorway,36),-10);
+    line-cap:round;
+    line-join:round;
+  }
+  .fill[zoom>=10] {
+    line-color:@motorway;
+    line-cap:round;
+    line-join:round;
+  }
+}
+    </pre></div>
 
 <!-- Tile-based overlays -->
-<div>Tiled overlays: when design and scale matter</div>
-    <div>Chrolopleths across thousands of features</div>
-        <div>Load data, classify on a certain field</div>
-        <div>Use color or patterns to quantify values</div>
+<div><h3>Tiled overlays</h3> When design and scale matter</div>
+    <div><img src='img/choropleth.png'></div>
+    <div><img src='img/inspect.png'></div>
+    <div><img src='img/choropleth.png'></div>
     <div>Show millions of points precisely without sacrificing speed</div>
-    <div>Other possibilities: dot densities; custom shapes</div>
-    <div>Serving tiles == serving images</div>
-        <div>(and maybe interactivity)</div>
-        <div>Mapnik -> cached images</div>
+    <div><img src='img/dots.png'></div>
+    <div style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;"><iframe width="100%" height="100%" frameBorder='0' src='http://a.tiles.mapbox.com/v3/dhcole.dots-and-lines.html#5/36.05535/-96.37209999999999'></iframe></div>
+    <div><h3>Interactivity</h3><img src='img/debt.png'></div>
+    <div><img src='img/debt-template.png'></div>
+    <div><img src='img/debt.png'></div>
+    <div><h3>MBTiles</h3><center><img style="padding: 40px;" src='img/mbtiles.png'></center></div>
+    <div><h3>MBTiles</h3><center><img src='img/inside-mbtiles.png'></center></div>
 
-    
 <!-- Adding client-side features -->
 
 <div><h3>The Client Side</h3> putting web maps on web pages</div>
