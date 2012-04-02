@@ -63,7 +63,7 @@
         <div><h3>Pivot tables</h3>Aggregate records of data on an attribute</div>
         <div><h3>Points in areas</h3><img src='img/points-in-poly.png'></div>
         <div><h3>Nearest neighbors</h3><img src='img/nearest.png'></div>
-        <div><h3>Gridding</h3><img src='https://img.skitch.com/20120315-gixcd7c26p8uq26d258epnteur.jpg'></div>
+        <div><h3>Gridding</h3><img src='img/gridding.jpg'></div>
 <div>Designing the map</div>
     <div>Applying styles to data: TileMill and Carto</div>
     <div>Zoom-dependent design: What to show and when</div>
@@ -116,8 +116,16 @@ map.addLayer(new L.Marker(new L.LatLng(-34.397, 150.644)));
 </pre></div>
 <div><img src='img/leaflet_two.png' /></div>
 
-<div>What about...</div>
 <div><h3>Performance</h3> Multiple kinds.</div>
+<div><h3>Client-side</h3> <center><img src='img/netbook.png' /></center></div>
+<div><h3>Client-side</h3> Minimize page weight via magic.</div>
+<div><h3>Client-side</h3> page weight = #/<em>elements</em> + kb/<em>data</em> + ms/<em>javascript</em></div>
+<div><h3>Client-side</h3> magic = MapBox's UTFGrid, Canvas</div>
+<div><h3>Server-side</h3> <center><img src='img/gaming_rig.png' /></center></div>
+<div><h3>Server-side</h3> Maximize clients &times; (maps/sec) </div>
+<div><h3>Server-side</h3> Cache, optimize, distribute</div>
+<div><h3>Server-side</h3> TileMill renders maps - then 'just' distribute tiles</div>
+<div><h3>Server-side</h3> Never <strong>WMS</strong> again; tiles are cacheable and distributable</div>
 
 <!-- Tile-based overlays -->
 <div>Tiled overlays: when design and scale matter</div>
