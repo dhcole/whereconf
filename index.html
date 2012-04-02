@@ -15,7 +15,7 @@
 
 <!-- Intro to web mapping: what can you make? -->
 <div><h3>An Open Web Mapping Toolbox</h3>
-<span style='font-size:85px;line-heivertical-align:top;'>Dave Cole &amp; Tom MacWright</span>
+<span style='font-size:85px;line-heivertical-align:top;'>Dave Cole &amp; Tom MacWright<br />from <em>MapBox</em></span>
 </div>
     <div>What kind of web maps can you make?</div>
     <div><h3>A base map</h3>
@@ -50,7 +50,7 @@
     <div><h3>Tools</h3>QGIS, ORG / GDAL, PostGIS, scripting</div>
     <div><h3>Formats</h3> shp, geojson, kml, geotiff, csv</div>
     <div>Adding geographic data</div>
-    <div><h3>Geocoding</h3> <strong>55 4th Street, San Francisco, CA 94103</strong> -> <pre class='prettyprint'>
+    <div><h3>Geocoding</h3> <strong>55 4th Street, San Francisco, CA 94103 &rarr;</strong> <pre class='prettyprint'>
     {
         lng: -122.404883,
         lat: 37.785034
@@ -65,6 +65,8 @@
     <center><img src='img/join.png' style='padding-top: 40px;'></center>
     
     </div>
+    <div><h3>Projections</h3> <span style='display:block;text-align:center; background:#000;'>
+      <img src='img/projection_tween.gif' /></span></div>
     <div><h3>Projections</h3>Converting a 3d globe to a flat map</div>
         <div><h3>Spherical <strong>mercator</strong></h3> 
             <img src='img/mercator.png'></div>
@@ -132,6 +134,8 @@
 <div>generally <strong>Javascript</strong> libraries that deal in <strong>images</strong></div>
 <div>lots of options:</div>
 <div><h3>OpenLayers</h3>established, monolithic, 'hefty'</div>
+<div>920KB<br /><strong>=</strong> 9.5 jQueries<br /><strong>=</strong> every deprecated 90s protocol</div>
+<div>So it's overkill for most humans, but <em>2.12</em> will be sweet</div>
 <div><h3>Leaflet</h3> OpenLayers post-web renassiance &amp; workout time</div>
 <div><h3>Modest Maps</h3> nothing but tiles: wafer thin &amp; light</div>
 <div><h3>'Theme'</h3> open source libraries &gt; their &copy; equivalents</div>
@@ -157,7 +161,7 @@ var map = new L.Map('map', {
 });</pre></div>
 
 <div><img src='img/leaflet_one.png' /></div>
-<div>'red dot fever'</div>
+<div><img src='img/dotties.gif' /><h3>'red dot fever'</h3></div>
 <div><pre class='prettyprint'>
 // Making a marker in Google Maps
 var marker = new google.maps.Marker({
