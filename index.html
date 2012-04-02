@@ -14,7 +14,9 @@
 <body>
 
 <!-- Intro to web mapping: what can you make? -->
-<div><h3>An Open Web Mapping Toolbox</h3></div>
+<div><h3>An Open Web Mapping Toolbox</h3>
+<span style='font-size:85px;line-heivertical-align:top;'>Dave Cole &amp; Tom MacWright</span>
+</div>
     <div>What kind of web maps can you make?</div>
     <div><h3>A base map:</h3>
         <img src="img/base-map-features.png">
@@ -34,13 +36,13 @@
 <div><h3>Process:</h3></div>
 <div><h3><strong>1.</strong> Sourcing data</h3> Where do you find reliable open data?</div>
 <div><h3><strong>2.</strong> Processing data</h3> Adding geographic information, projections, summarization</h3></div>
-<div><h3><strong>3.</strong> Designing the map</h3> visualizing the data; telling a story</div>
-<div><h3><strong>4.</strong> Map distribution</h3> rendering / serving the map on the web / mobile</div>
+<div><img src='design_bg.png' /><h3><strong>3.</strong> Design</h3> visualizing the data; telling a story</div>
+<div><h3><strong>4.</strong> Map distribution</h3> rendering &rarr; serving tiles &rarr; interfaces on web &amp; mobile</div>
 
 <!-- Making a base layer: tiled -->
 <div><h3>Where to find open data:</h3></div>
-    <div><h3>OpenStreetMap</h3>http://www.openstreet<br>map.org</div>
-    <div><h3>US Census</h3>http://www.census.gov/<br>geo/www/tiger</div>
+    <div><h3>OpenStreetMap</h3>openstreet<br>map.org</div>
+    <div><h3>US Census</h3>census.gov/<br>geo/www/tiger</div>
     <div><h3>Local government open data</h3></div>
     <div><h3>Natural Earth</h3>http://www.natural<br>earthdata.com</div>
     <div><h3>Data you create</h3>Like a <strong>spreadsheet</strong> or <strong>list</strong> of addresses</div>
@@ -101,7 +103,7 @@ new google.maps.Map($('map')[0], {
     -34.397, 150.644),
   mapTypeId: google.maps.MapTypeId.ROADMAP
 });</pre></div>
-<div><img src='http://dl.dropbox.com/u/68059/Screenshots/206ud2hv028g.png' /></div>
+<div><img src='img/google_maps_one.png' /></div>
 
 
 <div><pre class='prettyprint'>
@@ -113,7 +115,7 @@ var map = new L.Map('map', {
     layers: [new L.TileLayer(mylayer + '/{z}/{x}/{y}.png')]
 });</pre></div>
 
-<div><img src='http://dl.dropbox.com/u/68059/Screenshots/lxjw2xadyiyi.png' /></div>
+<div><img src='img/leaflet_one.png' /></div>
 <div>'red dot fever'</div>
 <div><pre class='prettyprint'>
 // Making a marker in Google Maps
@@ -121,16 +123,16 @@ var marker = new google.maps.Marker({
   position: new google.maps.LatLng(-34.397, 150.644),
   map: map
 });</pre></div>
-<div><img src='http://dl.dropbox.com/u/68059/Screenshots/d_xmeo961uu9.png'></div>
+<div><img src='img/google_maps_two.png'></div>
 
 <div><pre class='prettyprint'>
 // Making a marker in Leaflet
 map.addLayer(new L.Marker(new L.LatLng(-34.397, 150.644)));
 </pre></div>
-<div><img src='http://dl.dropbox.com/u/68059/Screenshots/93kn1tys~k8b.png' /></div>
+<div><img src='img/leaflet_two.png' /></div>
 
 <div>What about...</div>
-<div><h3>Performance</h3> </div>
+<div><h3>Performance</h3> Multiple kinds.</div>
 
 </body>
 </html>
