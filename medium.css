@@ -15,6 +15,8 @@ body {
 }
 em {
   color:#ade;
+  font-style:normal;
+  background:#0D3B4B;
 }
 pre {
   font-size:50px;
