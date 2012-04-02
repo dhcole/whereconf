@@ -3,10 +3,10 @@ body {
   color:#FFF;
   font-family:'Droid Sans';
   font-weight:normal;
-  font-size:120px;
   margin:0;
-  padding:0;
-  line-height:140px;
+  padding:20px;
+  font-size:110px;
+  line-height:120px;
   overflow: hidden;
 }
 @-webkit-keyframes blinker {
@@ -16,7 +16,7 @@ body {
 em {
   color:#ade;
   font-style:normal;
-  background:#0D3B4B;
+  background:url(grid.png) #111;
 }
 pre {
   font-size:50px;
@@ -27,7 +27,7 @@ h3 {
   padding:5px;
   color:#CAEAF5;
   font-weight:normal;
-  background:url(grid.png) #222;
+  background:url(grid.png) rgba(10, 10, 10, 0.8);
 }
 strong {
   color:#ade;
