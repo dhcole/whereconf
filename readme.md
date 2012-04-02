@@ -8,7 +8,7 @@
     
 ### (5 min) What are the steps
 
-- sourcing data
+- sourcing data (open source data)
 - processing data
 - designing map
 - integrating with web (for adding features, distributing maps)
