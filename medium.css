@@ -7,6 +7,7 @@ body {
   margin:0;
   padding:0;
   line-height:140px;
+  overflow: hidden;
 }
 @-webkit-keyframes blinker {
   from { opacity: 1.0; }
@@ -33,4 +34,7 @@ a {
   color:#ade;
   border-bottom:4px solid #ade;
   text-decoration:none;
+}
+img {
+  max-width: 100%
 }

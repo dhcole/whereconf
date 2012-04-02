@@ -3,6 +3,7 @@
 <html><head>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='medium.css' rel='stylesheet' type='text/css' />
     <link href='prettyprint.css' rel='stylesheet' type='text/css' />
     <meta charset='utf8' />
@@ -13,31 +14,58 @@
 <body>
 
 <!-- Intro to web mapping: what can you make? -->
-<div>An Open Web Mapping Toolbox</div>
+<div><h3>An Open Web Mapping Toolbox</h3></div>
     <div>What kind of web maps can you make?</div>
-    <div>A base map:
-        <img src="img/base-map.png">
-    </div>
-    <div>With features:
+    <div><h3>A base map:</h3>
         <img src="img/base-map-features.png">
     </div>
-    <div>Or tile-based overlays:
+    <div><h3>With features</h3>
+        <img src="img/base-map.png">
+    </div>
+    <div><h3>Or tiled overlays</h3>
         <img src="img/tile-overlay.png">
+    </div>
+    <div><h3>Or tiled overlays</h3>
+        <img src="img/tile-overlay-grid.png">
     </div>
     
 <!-- What are the steps -->
-<div>1. Sourcing data: where do you find reliable open data</div>
-<div>2. Processing data: adding geographic information, projections, summarization</div>
-<div>3. Designing the map: visualizing the data; telling a story</div>
-<div>4. Map distribution: rendering / serving the map on the web / mobile</div>
+<div><h3>Process:</h3></div>
+<div><h3><strong>1.</strong> Sourcing data</h3> Where do you find reliable open data?</div>
+<div><h3><strong>2.</strong> Processing data</h3> Adding geographic information, projections, summarization</h3></div>
+<div><h3><strong>3.</strong> Designing the map</h3> visualizing the data; telling a story</div>
+<div><h3><strong>4.</strong> Map distribution</h3> rendering / serving the map on the web / mobile</div>
 
 <!-- Making a base layer: tiled -->
-
-    <div>OpenStreetMap<br><small><a href='http://openstreetmap.org/'>openstreetmap.org</a></small></div>
-    <div>US Census<br><small><a href='http://census.gov/geo/www/tiger'>census.gov/geo/www/tiger</a></small></div>
-    <div>Local government open data</div>
-    <div>Natural Earth<br><small><a href='http://naturalearthdata.com/'>naturalearthdata.com</a></small></div>
-    <div>Data you create, like a <strong>spreadsheet</strong></div>
+<div><h3>Where to find open data:</h3></div>
+    <div><h3>OpenStreetMap</h3>http://www.openstreet<br>map.org</div>
+    <div><h3>US Census</h3>http://www.census.gov/<br>geo/www/tiger</div>
+    <div><h3>Local government open data</h3></div>
+    <div><h3>Natural Earth</h3>http://www.natural<br>earthdata.com</div>
+    <div><h3>Data you create</h3>Like a <strong>spreadsheet</strong> or <strong>list</strong> of addresses</div>
+<div><h3>Processing data:</h3></div>
+    <div><h3>Tools</h3>QGIS, ORG / GDAL, PostGIS, scripting</div>
+    <div><h3>Formats</h3> shp, geojson, kml, geotiff, csv</div>
+    <div><h3>Geocoding</h3> <strong>55 4th Street, San Francisco, CA 94103</strong> -> <pre class='prettyprint'>
+    {
+        lng: -122.404883,
+        lat: 37.785034
+    }
+    </pre></div>
+    <div><h3>Projections</h3>Converting a 3d globe to a flat map</div>
+        <div><h3>Spherical <strong>mercator</strong></h3> 
+            <img src='img/mercator.png'></div>
+        <div><h3><strong>Albers</strong> equal area</h3>
+            <img src='img/albers.png'></div>
+    <div><h3>Summarization</h3>Viewing data in aggregate</div>
+        <div><h3>Pivot tables</h3>Aggregate records of data on an attribute</div>
+        <div><h3>Points in areas</h3><img src='img/points-in-poly.png'></div>
+        <div><h3>Nearest neighbors</h3><img src='img/nearest.png'></div>
+        <div><h3>Gridding</h3><img src='https://img.skitch.com/20120315-gixcd7c26p8uq26d258epnteur.jpg'></div>
+<div>Designing the map</div>
+    <div>Applying styles to data: TileMill and Carto</div>
+    <div>Zoom-dependent design: What to show and when</div>
+    <div>Interactive features: overlays add context</div>
     
     
 <!-- Adding client-side features -->
@@ -88,5 +116,17 @@ map.addLayer(new L.Marker(new L.LatLng(-34.397, 150.644)));
 
 <div>What about...</div>
 <div><h3>Performance</h3> </div>
+
+<!-- Tile-based overlays -->
+<div>Tiled overlays: when design and scale matter</div>
+    <div>Chrolopleths across thousands of features</div>
+        <div>Load data, classify on a certain field</div>
+        <div>Use color or patterns to quantify values</div>
+    <div>Show millions of points precisely without sacrificing speed</div>
+    <div>Other possibilities: dot densities; custom shapes</div>
+    <div>Serving tiles == serving images</div>
+        <div>(and maybe interactivity)</div>
+        <div>Mapnik -> cached images</div>
+
 </body>
 </html>
